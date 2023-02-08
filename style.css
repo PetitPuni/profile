@@ -1,7 +1,7 @@
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
   .container {
-    width: 700px;
+    width: 500px;
     margin: 20px auto;
   }
 }
@@ -22,29 +22,31 @@
   }
 }
 
-body:before{
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  background-image: url("images/background.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.4;
-}
-
 body{
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
   background-color: rgb(80, 81, 79, 0.3);
   color:rgb(36, 123, 160);
   font-size: 18px;
-  line-height: 1em;
+  line-height: 2em;
   text-align: center;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(153, 162, 55, 0.1),
+    rgba(36, 123, 160, 0.5)
+  ),url("images/background.jpg");
+}
+
+.image-size{
+  max-width: 50%;
+	height: 100%;
+
+
+}
+.container {
+  width: 55%;
+  margin: 20px auto;
+
 }
 
 .card-white{
@@ -53,7 +55,15 @@ body{
   border-radius: 10px;
   padding: 30px;
   background-color: rgb(255,255,255);
-  box-shadow: 0 18px rgb(0,0,0,0.2);
+  box-shadow: 0 18px rgb(255, 224, 102, 0.1);
+}
+
+#fun-fact{
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  box-shadow: none;
+  align-items: center;
 }
 
 h1{
